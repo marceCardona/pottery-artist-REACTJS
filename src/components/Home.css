@@ -1,0 +1,32 @@
+.trio-image-wrapper {
+    padding: 0;
+}
+.image-trio-home {
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.button-effect {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .trio-image-wrapper:hover .image-trio-home {
+    opacity: 0.3;
+  }
+  .trio-image-wrapper:hover:hover .button-effect {
+    opacity: 1;
+  }
+  .jumbotron-home{
+    background-color: white;
+  }
+  

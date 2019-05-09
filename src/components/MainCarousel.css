@@ -1,0 +1,15 @@
+.carousel-image-container {
+    height:70vh;
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width: 768px) and (min-width: 426px) {
+    .carousel-image-container {
+        height:50vh;
+    }
+}
+@media (max-width: 425px) {
+    .carousel-image-container {
+        height:25vh;
+    }
+}
