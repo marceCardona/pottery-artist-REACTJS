@@ -5,6 +5,15 @@ import './MainNavigation.css';
 
 
 export default class MainNavigation extends Component {
+    state = {
+        productDetails: []
+    }
+    componentDidMount(){
+       /*  const productCategories = this.props.type; */
+        fetch('https://hplussport.com/api/products/order/price/sort/asc/qty/3')
+            .then(fetchResponse => fetchResponse.json())
+            .then(jsonData => this.setState({productDetails: jsonData}))
+    }
     render() {
         return (
             <Navbar sticky="top" bg="dark" expand="lg">
@@ -17,10 +26,19 @@ export default class MainNavigation extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/">HOME</Nav.Link>
                             <Nav.Link href="/about">ABOUT</Nav.Link>
-                            <NavDropdown title="SHOP" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/shop1">Category 1</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">Category 2</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Category 3</NavDropdown.Item>
+                             <NavDropdown title="SHOP" id="basic-nav-dropdown">
+                             {this.state.productDetails
+                                ? 
+                                this.state.productDetails.map(category => {
+                                    return (
+                                        <NavDropdown.Item href="/shop1">{category.name}</NavDropdown.Item>
+                                    )
+                                })
+                                
+                                : ""
+                            }
+
+                           
                             </NavDropdown>
                             <Nav.Link href="/contact">CONTACT US</Nav.Link>
                         </Nav>
