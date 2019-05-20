@@ -7,6 +7,7 @@ import Shop from './components/Shop1';
 import Contact from './components/Contact';
 import Product from './components/Product';
 import MainNavigation from './components/MainNavigation';
+import Articles from './components/Articles';
 
 
 
@@ -21,7 +22,7 @@ class App extends Component {
           <Route path="/shop1" component={Shop} />
           <Route path="/contact" component={Contact} />
           <Route path="/product/:id" component={Product} />
-
+          <Route path="/articles" component={Articles} />
         </div>
 
       </Router>  
