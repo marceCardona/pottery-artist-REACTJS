@@ -1,8 +1,8 @@
 .bg-dark {
-    background-color: #b8b7b6 !important;
+    background-color: #d6d5d4 !important;
 }
-.navbar-dark .navbar-nav .nav-link {
-    color: black;
+.navbar-light .navbar-nav .nav-link {
+    color: #483e40 !important;
 }
 
 

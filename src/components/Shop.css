@@ -8,6 +8,9 @@
     height:60vh;
     background-position: center;
     background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 200%;
 }
 @media (max-width: 768px) and (min-width: 426px) {
     .jumbotron-shop1 {

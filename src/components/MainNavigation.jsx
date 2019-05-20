@@ -19,27 +19,26 @@ export default class MainNavigation extends Component {
             <Navbar sticky="top" bg="dark" expand="lg">
                 <Container>
                     <Navbar.Brand>
-                        <Link to="/"><img alt="Roswitha Wulff Logo" src="/images/RWLogo.png"/></Link>
+                        <Link to="/"><img alt="Roswitha Wulff Logo" src="/images/RWLogo.png" title="Roswitha Wulff - Pottery Artist"/></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <Nav.Link href="/">HOME</Nav.Link>
                             <Nav.Link href="/about">ABOUT</Nav.Link>
-                             <NavDropdown title="SHOP" id="basic-nav-dropdown">
+                             <NavDropdown title="PRODUCTS" id="basic-nav-dropdown">
                              {this.state.productDetails
                                 ? 
                                 this.state.productDetails.map(category => {
                                     return (
-                                        <NavDropdown.Item href="/shop1">{category.name}</NavDropdown.Item>
+                                        <NavDropdown.Item href="/shop1">{category.id} 1</NavDropdown.Item>
                                     )
                                 })
                                 
                                 : ""
                             }
-
-                           
                             </NavDropdown>
+                            <Nav.Link href="/articles">ARTICLES</Nav.Link>
                             <Nav.Link href="/contact">CONTACT US</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
