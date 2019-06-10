@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import MainCarousel from './MainCarousel';
 import Footer from './Footer';
 
-
 export default class Home extends Component {
     render() {
         return (
@@ -19,9 +18,9 @@ export default class Home extends Component {
                             </Col>
                             <Col xs={12} sm={6} className="home-column-2">
                                 <h3>About Me</h3>
-                                <p>In this world of change and distraction, the quality that I strive for in my work is a quiet simplicity. Making pots is a ritual - a celebration of the physical nature of being, and a renewal of life's energy, unfolding through the process of making. The adventure is in the pursuit. </p>
+                                <p>"In this world of change and distraction, the quality that I strive for in my work is a quiet simplicity. Making pots is a ritual - a celebration of the physical nature of being, and a renewal of life's energy, unfolding through the process of making. The adventure is in the pursuit."</p>
                                 <Link to="/about">
-                                    <Button variant="primary">Read More</Button>
+                                    <Button variant="dark">Read More</Button>
                                 </Link>
                             </Col>
                         </Row>
@@ -29,23 +28,25 @@ export default class Home extends Component {
                     </Container>    
                 </Jumbotron>
 
+                <h2 className="homeh2">Products</h2>
+
                 <Row className="show-grid text-center">
-                    <Col xs={12} sm={4} className="trio-image-wrapper" fluid>
+                    <Col xs={12} sm={4} className="trio-image-wrapper">
                         <Image className="image-trio-home" src="images/category1.jpg" />
-                        <Link to="/shop1">
-                            <Button className="button-effect" variant="dark">Shop Now</Button>
+                        <Link to="/Wallpiece">
+                            <Button className="button-effect" variant="dark">View Products</Button>
                         </Link>
                     </Col>
-                    <Col xs={12} sm={4} className="trio-image-wrapper" fluid>
+                    <Col xs={12} sm={4} className="trio-image-wrapper">
                         <Image className="image-trio-home" src="images/category2.jpg" />
-                        <Link to="/shop1">
-                            <Button className="button-effect" variant="dark">Shop Now</Button>
+                        <Link to="/Tableware">
+                            <Button className="button-effect" variant="dark">View Products</Button>
                         </Link>
                     </Col>
-                    <Col xs={12} sm={4} className="trio-image-wrapper" fluid>
+                    <Col xs={12} sm={4} className="trio-image-wrapper">
                         <Image className="image-trio-home" src="images/category3.jpg" />
-                        <Link to="/shop1">
-                            <Button className="button-effect" variant="dark">Shop Now</Button>
+                        <Link to="/Vase">
+                            <Button className="button-effect" variant="dark">View Products</Button>
                         </Link>
                     </Col>
                 </Row>

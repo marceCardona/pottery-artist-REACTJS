@@ -3,11 +3,12 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './components/Home';
 import About from './components/About';
-import Shop from './components/Shop1';
+import Vase from './components/Vase';
+import Tableware from './components/Tableware';
+import Wallpiece from './components/Wallpiece';
 import Contact from './components/Contact';
 import Product from './components/Product';
 import MainNavigation from './components/MainNavigation';
-import Articles from './components/Articles';
 
 
 
@@ -19,10 +20,11 @@ class App extends Component {
           <MainNavigation />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/shop1" component={Shop} />
+          <Route path="/Vase" component={Vase} />
+          <Route path="/Tableware" component={Tableware} />
+          <Route path="/Wallpiece" component={Wallpiece} />
           <Route path="/contact" component={Contact} />
           <Route path="/product/:id" component={Product} />
-          <Route path="/articles" component={Articles} />
         </div>
 
       </Router>  

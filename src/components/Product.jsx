@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Figure } from 'react-bootstrap';
-import './Product.css';
+import './Home.css';
+import Footer from './Footer';
 
 export default class Product extends Component {
     state = { 
@@ -25,21 +26,16 @@ export default class Product extends Component {
                                 alt={this.state.productDetails.name}
                                 src={this.state.productDetails.images[0].src}
                             />
-                            {/* <Figure.Caption className="product_details">
-                                <h2>{this.state.productDetails.name}</h2>
-                                <p dangerouslySetInnerHTML = {{ __html: this.state.productDetails.short_description }} /> 
-                            </Figure.Caption> */}
                         </Figure>
                         <div className="product_details">
                             <h2>{this.state.productDetails.name}</h2>
-                            <p dangerouslySetInnerHTML={{ __html: this.state.productDetails.short_description }} />
-                            <p dangerouslySetInnerHTML={{ __html: this.state.productDetails.price_html }} /> 
-                            
+                            <p dangerouslySetInnerHTML={{ __html: this.state.productDetails.short_description }} />             
                         </div>
                         
                     </Container>
+                    <Footer />
                 </div>  
-                :  ""
+            :  ""
                         
         )
     }
